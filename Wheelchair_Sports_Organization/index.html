@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JavaScript/script.js" defer></script>
+    <title>Wheelchair Sports Organization</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <!-- Navigation Links for Desktop -->
+            <div class="nav-links">
+                <div class="logo">
+                    <a href="index.html"><h1>WSO</h1></a>
+                </div>
+                <a class="nav-links-links" href="index.html">Home</a>
+                <a class="nav-links-links" href="about.html">About</a>
+                <a class="nav-links-links" href="news.html">News</a>
+                <a class="nav-links-links" href="donate.html">Donate</a>
+                <a class="nav-links-links" href="contact.html">Contact</a>
+            </div>
+
+           <!-- Hamburger Menu (should match 'menuToggle' in JS) -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <!-- Sidebar for Mobile (should match 'navLinks' in JS) -->
+        <div class="nav-links mobile" id="navLinks">
+            <div class="close-btn" id="closeBtn">
+                <i class="fa fa-times"></i>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="news.html">News</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Overlay (should match 'nav-overlay' in JS) -->
+        <div id="nav-overlay" class="overlay"></div>
+    </nav>
+
+    <section class="banner-section">    
+            <img src="Images/racing_banner.jpg" alt="Banner Photo">
+    </section>
+
+    <section class="donation-section">
+        <div class="donation-img">
+            <img src="Images/donation_basketball.jpg" alt="Donation Image">
+        </div>
+        <div class="donation-texts">
+            <h2>KEEP US MOVING</h2>
+
+            <p>
+                <b>With the upcoming Paralympic Games on the horizon</b>, your support is more crucial than ever. Your donation 
+                will provide the necessary resources, training, and opportunities for these remarkable athletes to shine. 
+                Contribute now and be a part of their journey to the next Paralympic Games! 
+            </p>
+
+            <div class="donation-button">
+                <button>DONATE NOW</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="img-section">
+        <div class="img-text">
+            <h2>UNSTOPPABLE SPIRIT</h2>
+            <p>
+                Step into the world of unparalleled determination and extraordinary achievements from the 2020 Paralympics. 
+                These powerful images capture the essence of resilience, courage, and the unbreakable human spirit. 
+                Each photo tells a story of athletes who have overcome immense challenges to compete on the world stage, 
+                inspiring us all to push beyond our limits. Join us in celebrating their victories and be moved by the strength
+                and dedication that define the Paralympic Games. 
+            </p>
+        </div>
+    
+        <div class="img-collection">
+            <div class="collage-item"><img src="Images/tennis/tennis1.jpg" alt="Image 1"></div>
+            <div class="collage-item"><img src="Images/archery/archery1.jpg" alt="Image 2"></div>
+            <div class="collage-item"><img src="Images/basketball/basketball1.jpg" alt="Image 3"></div>
+            <div class="collage-item"><img src="Images/fencing/fencing1.jpg" alt="Image 4"></div>
+            <div class="collage-item"><img src="Images/rugby/rugby1.jpg" alt="Image 5"></div>
+            <div class="collage-item"><img src="Images/sled_hockey/sled_hockey1.jpg" alt="Image 6"></div>
+            <div class="collage-item"><img src="Images/table_tennis/table_tennis1.jpg" alt="Image 7"></div>
+            <div class="collage-item"><img src="Images/volleyball/volleyball1.jpg" alt="Image 8"></div>
+            <div class="collage-item"><img src="Images/archery/archery2.jpg" alt="Image 9"></div>
+            <div class="collage-item"><img src="Images/rugby/rugby2.jpg" alt="Image 10"></div>
+            <div class="collage-item"><img src="Images/tennis/tennis2.jpg" alt="Image 11"></div>
+            <div class="collage-item"><img src="Images/fencing/fencing2.png" alt="Image 12"></div>
+            <div class="collage-item"><img src="Images/basketball/basketball2.jpg" alt="Image 13"></div>
+            <div class="collage-item"><img src="Images/sled_hockey/sled_hockey2.jpg" alt="Image 14"></div>
+            <div class="collage-item"><img src="Images/volleyball/volleyball2.jpg" alt="Image 15"></div>
+            <div class="collage-item"><img src="Images/archery/archery3.jpg" alt="Image 16"></div>
+            <div class="collage-item"><img src="Images/tennis/tennis3.jpeg" alt="Image 17"></div>
+            <div class="collage-item"><img src="Images/table_tennis/table_tennis.3.jpg" alt="Image 18"></div>
+            <div class="collage-item"><img src="Images/volleyball/volleyball3.jpg" alt="Image 19"></div>
+            <div class="collage-item"><img src="Images/basketball/basketball3.jpg" alt="Image 20"></div>
+            <div class="collage-item"><img src="Images/fencing/fencing3.jpg" alt="Image 21"></div>
+            <div class="collage-item"><img src="Images/rugby/rugby3.jpg" alt="Image 22"></div>
+            <div class="collage-item"><img src="Images/sled_hockey/sled_hockey3.jpg" alt="Image 23"></div>
+            <div class="collage-item"><img src="Images/volleyball/volleyball3.jpg" alt="Image 24"></div>
+        </div>
+    
+        <button id="show-more" class="show-more-button">SHOW MORE +</button>
+    </section>
+
+    <section class="signup-section">
+        <div class="signup-container">
+          <h2>Sign Up for Updates</h2>
+          <input type="email" placeholder="Enter your email address" class="signup-input" required>
+          <button class="signup-button">Sign Up</button>
+        </div>
+    </section>
+
+    <section class="socials-section">
+        <div class="socials-texts">
+            <h2>CONNECT WITH US</h2>
+        </div>
+        <div class="social-icons">
+            <i class="fa fa-facebook-f" style="font-size:30px"></i>
+            <i class="fa fa-instagram" style="font-size:30px"></i>
+            <i class="fa fa-twitter" style="font-size:30px"></i>
+        </div>
+    </section>
+
+    <footer class="copyright-section">
+        <div class="copyright-text">
+            <p>Copyright &copy; 2024 Wheelchair Sports Organization - All Rights Reserved.</p>
+        </div>     
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+body {
+    /*Default settings*/
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: relative;
+    padding-top: 30px;
+    padding-right: 40px;
+    display: flex; /*Line the items aling the x-axis (rows)*/
+    justify-content: flex-end; /*Put it all the way to the right*/
+}
+
+.nav-container {
+    display: flex; /*Align the items in the container in the x-axis*/
+    align-items: center; /*Center the items in the container*/
+    position: relative; /*Telative to it's surroundings*/
+}
+
+/* Menu toggle button (hamburger icon) */
+.menu-toggle {
+    display: none; /* Initially hidden on desktop */
+    font-size: 24px; /*Menu toggle size*/
+    margin-left: 440px; /*Space to the left*/
+    cursor: pointer; /*Pointer when the user hovers over the symbol*/
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /*Space between the nav-links*/
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-links .nav-links-links:hover{
+    color:rgb(116, 114, 114);
+}
+
+/* Sidebar for mobile */
+.nav-links.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    display: flex; 
+    flex-direction: column; /*Align the items in column*/
+    align-items: center; /*Center the items in the flex container*/
+    justify-content: center; /*Center the items in the side navbar*/
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /*Box shadow for the side navbar*/
+    transition: right 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+/* Sidebar when active */
+.nav-links.mobile.show {
+    right: 0; /* Slide in when 'show' class is added */
+}
+
+/* Overlay */
+#nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's behind the sidebar */
+}
+
+/* Show overlay when sidebar is active */
+#nav-overlay.show {
+    display: block; /* Show overlay when the sidebar opens */
+}
+
+/* Close button */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Show the close button when the sidebar is active */
+.nav-links.mobile.active .close-btn {
+    display: block;
+}
+
+.logo h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-right: 750px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.banner-section {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.banner-section img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.donation-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.donation-img img {
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    margin-right: 30px;
+}
+
+.donation-texts {
+    width: 30%;
+    margin-right: 10%;
+}
+
+.donation-texts h2 {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+
+}
+
+.donation-texts p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.donation-button {
+    margin-top: 30px;
+}
+
+.donation-button button {
+    padding: 15px 20px;
+    background-color: #ff0800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.donation-button button:hover {
+    background-color: #ff4500;
+}
+
+.img-section .img-text {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.img-section .img-text h2 {
+    font-size: 36px;
+}
+
+.img-text p {
+    font-size: 1.125em;
+    line-height: 1.6;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 760px;
+    margin: 15px auto;
+}
+
+.img-collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 400px;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+}
+
+.collage-item {
+    overflow: hidden;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.collage-item img:hover {
+    transform: scale(1.05);
+}
+
+.show-more-button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.signup-section {
+    position: relative;
+    background-image: url('../Images/social_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.signup-container {
+    color: white;
+}
+
+.signup-container h2 {
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+/* Input field style */
+.signup-input {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Button style */
+.signup-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Button hover effect */
+.signup-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.socials-section .socials-texts h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0 0 20px 0;
+    margin-top: 70px;
+}
+
+.socials-section .social-icons {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.copyright-section {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    gap: 500px;
+    justify-content: center;
+    background-color: rgb(240, 232, 223);
+}
+
+.copyright-text {
+    text-align: center;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Hide the nav links and show the hamburger icon on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links.mobile.show {
+        display: flex;
+        right: 0;
+    }
+
+    /* General adjustments */
+    nav {
+        padding-top: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+        margin-right: 0;
+    }
+
+    /* Donation section */
+    .donation-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .donation-img img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .donation-texts {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Image section */
+    .img-collection {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .collage-item {
+        height: auto;
+    }
+
+    /* Signup section */
+    .signup-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .signup-container h2 {
+        font-size: 36px;
+    }
+
+    .signup-input, .signup-button {
+        width: 100%;
+        margin: 10px 0;
+        display: block;
+    }
+
+    /* Footer */
+    .copyright-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .copyright-text {
+        margin-right: 0;
+        text-align: center;
+    }
+}

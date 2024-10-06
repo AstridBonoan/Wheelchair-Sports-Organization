@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: relative;
+    padding-top: 30px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Menu toggle button (hamburger icon) */
+.menu-toggle {
+    display: none; /* Initially hidden */
+    font-size: 24px;
+    margin-left: 440px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-links .nav-links-links:hover{
+    color:rgb(116, 114, 114);
+}
+
+/* Sidebar for mobile */
+.nav-links.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+/* Sidebar when active */
+.nav-links.mobile.show {
+    right: 0; /* Slide in when 'show' class is added */
+}
+
+/* Overlay */
+#nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's behind the sidebar */
+}
+
+/* Show overlay when sidebar is active */
+#nav-overlay.show {
+    display: block; /* Show overlay when the sidebar opens */
+}
+
+/* Close button */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Show the close button when the sidebar is active */
+.nav-links.mobile.active .close-btn {
+    display: block;
+}
+
+.logo h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-right: 750px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.title-heading {
+    margin-bottom: 70px;
+}
+.title-heading .title h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.news_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px;
+  }
+
+.img-collection {
+    display: contents; /* Makes sure grid is applied to the collage items */
+}
+  
+.collage-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+  }
+  
+.collage-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+.collage-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: black;
+  }
+  
+.collage-item p {
+    font-size: 1em;
+    color: #555;
+    color: black;
+}
+
+.img-collection a {
+    text-decoration: none;
+}
+
+.img-collection h3:hover{
+    color:blue;
+}
+
+.img-collection p:hover{
+    color:blue;
+}
+
+.copyright-section {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    gap: 500px;
+    justify-content: center;
+    background-color: rgb(240, 232, 223);
+}
+
+.copyright-text {
+    text-align: center;
+}
+
+  
+@media (max-width: 768px) {
+    /* Hide the nav links and show the hamburger icon on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links.mobile.show {
+        display: flex;
+        right: 0;
+    }
+
+    /* General adjustments */
+    nav {
+        padding-top: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+    .news_section {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+      }
+    
+    
+    /* Footer */
+    .copyright-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .copyright-text {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .news_section {
+      grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+    
+    /* Footer */
+    .copyright-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .copyright-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+  }

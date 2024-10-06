@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: relative;
+    padding-top: 30px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Menu toggle button (hamburger icon) */
+.menu-toggle {
+    display: none; /* Initially hidden */
+    font-size: 24px;
+    margin-left: 440px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-links .nav-links-links:hover{
+    color:rgb(116, 114, 114);
+}
+
+/* Sidebar for mobile */
+.nav-links.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth sliding effect */
+    z-index: 1001;
+}
+
+/* Sidebar when active */
+.nav-links.mobile.show {
+    right: 0; /* Slide in when 'show' class is added */
+}
+
+/* Overlay */
+#nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it's behind the sidebar */
+}
+
+/* Show overlay when sidebar is active */
+#nav-overlay.show {
+    display: block; /* Show overlay when the sidebar opens */
+}
+
+/* Close button */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Show the close button when the sidebar is active */
+.nav-links.mobile.active .close-btn {
+    display: block;
+}
+
+.logo h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-right: 750px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.donation-section {
+    position: relative; /* Allows positioning of the overlay */
+    background-image: url('../Images/softball_donation1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensures the overlay doesn't overflow */
+}
+
+/* Overlay styling */
+.donation-section::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Positions the overlay */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    right: 0; /* Aligns to the right */
+    bottom: 0; /* Aligns to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Places the overlay below the text */
+}
+
+.donation-container {
+    color: white; /* Text color */
+    z-index: 2; /* Places the text above the overlay */
+}
+
+.donation-button button{
+    padding: 15px 20px;
+    background-color: #ff0800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+.donation-container h2 {
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+.donation-container p {
+    font-size: 23px;
+}
+
+.copyright-section {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    gap: 500px;
+    justify-content: center;
+    background-color: rgb(240, 232, 223);
+}
+
+.copyright-text {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    /* Hide the nav links and show the hamburger icon on mobile */
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links.mobile.show {
+        display: flex;
+        right: 0;
+    }
+
+    /* General adjustments */
+    nav {
+        padding-top: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+     /* Donation section */
+     .donation-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .donation-img img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .donation-texts {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+    /* Footer */
+    .copyright-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .copyright-text {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+    .news_section {
+      grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+    
+    /* Footer */
+    .copyright-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .copyright-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+  }
